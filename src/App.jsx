@@ -1242,7 +1242,7 @@ function LoginPage({ onLogin }) {
           {loading ? "Verificando..." : "Acessar"}
         </button>
         <p style={{ fontSize: "11px", color: "#b89070", margin: "16px 0 0", lineHeight: 1.5 }}>
-          Problemas com o acesso? Fale com a Natasha no Telegram.
+          Problemas com o acesso? Entre em contato: villare.chat@gmail.com
         </p>
       </div>
     </div>
