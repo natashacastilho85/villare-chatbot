@@ -1143,13 +1143,13 @@ function LoginPage({ onLogin }) {
       .single();
 
     if (error || !data) {
-      setErro("E-mail não encontrado ou acesso inativo. Entre em contato com a Natasha.");
+      setErro("E-mail não encontrado ou acesso inativo. Entre em contato: villare.chat@gmail.com");
       setLoading(false);
       return;
     }
 
     if (data.expira_em && new Date(data.expira_em) < new Date()) {
-      setErro("Seu acesso expirou. Renove pelo Telegram para continuar. 💛");
+      setErro("expirado");
       setLoading(false);
       return;
     }
@@ -1213,7 +1213,19 @@ function LoginPage({ onLogin }) {
             marginBottom: "12px", fontFamily: "Georgia, serif",
           }}
         />
-        {erro && <p style={{ color: "#c0603a", fontSize: "12px", margin: "0 0 12px", lineHeight: 1.5 }}>{erro}</p>}
+        {erro && (
+  <p style={{ color: "#c0603a", fontSize: "12px", margin: "0 0 12px", lineHeight: 1.5 }}>
+    {erro === "expirado" ? (
+      <span>
+        Seu acesso expirou.{" "}
+        <a href="https://villareatelier.com.br/renovacaoia" target="_blank" rel="noreferrer" style={{ color: "#a07850" }}>
+          Clique aqui para renovar
+        </a>{" "}
+        e continuar aprendendo. 💛
+      </span>
+    ) : erro}
+  </p>
+)}
         {sucesso && <p style={{ color: "#6a9050", fontSize: "12px", margin: "0 0 12px" }}>✓ Acesso liberado! Entrando...</p>}
         <button
           onClick={handleLogin}
