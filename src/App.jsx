@@ -4367,7 +4367,7 @@ function LoginPage({ onLogin }) {
       background: "linear-gradient(135deg, #fdf8f2 0%, #f5ede0 50%, #ede0d4 100%)",
       fontFamily: "'Georgia', 'Times New Roman', serif",
       display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center", padding: "16px",
+      alignItems: "center", justifyContent: "center", padding: "24px",
     }}>
       <div style={{ marginBottom: "32px", textAlign: "center" }}>
         <div style={{
