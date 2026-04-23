@@ -4393,7 +4393,7 @@ function LoginPage({ onLogin }) {
   background: "rgba(255,255,255,0.70)", backdropFilter: "blur(12px)",
   borderRadius: "40px", border: "1px solid rgba(196,156,110,0.22)",
   boxShadow: "0 8px 40px rgba(162,120,80,0.12)",
-  padding: "36px 32px", width: "100%", maxWidth: "380px", margin: "0 24px",
+  padding: "36px 32px", width: "calc(100% - 48px)", maxWidth: "380px",
   textAlign: "center",
 }}>
         <p style={{ fontSize: "15px", color: "#6a4020", fontWeight: "600", margin: "0 0 6px" }}>
