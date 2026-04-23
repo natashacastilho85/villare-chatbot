@@ -1289,7 +1289,7 @@ export default function MetodoVillareChat() {
         }),
       });
       const data = await response.json();
-      const reply = data.content?.[0]?.text || "Não consegui processar sua dúvida agora. Tente novamente!";
+      const reply = data.content?.[0]?.text || JSON.stringify(data);
       setMessages([...newMessages, { role: "assistant", content: reply }]);
     } catch {
       setMessages([...newMessages, { role: "assistant", content: "Ops, tive um problema técnico. Tente novamente em instantes! 🌿" }]);
