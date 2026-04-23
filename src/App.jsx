@@ -4367,7 +4367,7 @@ function LoginPage({ onLogin }) {
       background: "linear-gradient(135deg, #fdf8f2 0%, #f5ede0 50%, #ede0d4 100%)",
       fontFamily: "'Georgia', 'Times New Roman', serif",
       display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center", padding: "24px",
+      alignItems: "center", justifyContent: "center", padding: "24px", minHeight: "100vh",
     }}>
       <div style={{ marginBottom: "32px", textAlign: "center" }}>
         <div style={{
@@ -4400,7 +4400,7 @@ function LoginPage({ onLogin }) {
           Acesso exclusivo para alunos
         </p>
         <p style={{ fontSize: "13px", color: "#a07850", margin: "0 0 24px", lineHeight: 1.6 }}>
-          Digite o e-mail que você usou para adquirir o curso
+          Digite o e-mail que você usou<br/>para adquirir o curso
         </p>
         <input
           type="email"
