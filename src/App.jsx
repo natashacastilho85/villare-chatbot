@@ -1278,16 +1278,14 @@ export default function MetodoVillareChat() {
     setInput("");
     setLoading(true);
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-haiku-4-5-20251001",
-          max_tokens: 1000,
-          system: SYSTEM_PROMPT(knowledge),
-          messages: newMessages.map((m) => ({ role: m.role, content: m.content })),
-        }),
-      });
+      const response = await fetch("/api/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    system: SYSTEM_PROMPT(knowledge),
+    messages: newMessages.map((m) => ({ role: m.role, content: m.content })),
+  }),
+});
       const data = await response.json();
       const reply = data.content?.[0]?.text || JSON.stringify(data);
       setMessages([...newMessages, { role: "assistant", content: reply }]);
