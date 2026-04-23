@@ -4363,7 +4363,7 @@ function LoginPage({ onLogin }) {
 
   return (
     <div style={{
-      minHeight: "100vh",
+      minHeight: "100svh",
       background: "linear-gradient(135deg, #fdf8f2 0%, #f5ede0 50%, #ede0d4 100%)",
       fontFamily: "'Georgia', 'Times New Roman', serif",
       display: "flex", flexDirection: "column",
